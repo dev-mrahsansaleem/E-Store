@@ -3,6 +3,8 @@ import { Box, Text } from "react-native-design-utility";
 import OnbordingLogo from "../commons/OnbordingLogo";
 import LoginButton from "../commons/LoginButtons";
 import { Alert, Animated } from "react-native";
+import { FacebookApi } from "../Api/facebook";
+import { GoogleApi } from "../Api/goggle";
 
 class LoginScreen extends React.Component {
   state = {
@@ -14,16 +16,28 @@ class LoginScreen extends React.Component {
     Animated.parallel([this.opacityAnim(), this.positionAnim()]);
   }
 
-  onGooglePress = () => {
-    Alert.alert("Google pressed");
+  onGooglePress = async () => {
+    try {
+      const tokken = await GoogleApi.loginAsync();
+      console.log("tokken: ", tokken);
+    } catch (error) {
+      console.log("error: ", error);
+    }
   };
 
-  onFbPress = () => {
-    Alert.alert("Fb pressed");
+  onFbPress = async () => {
+    try {
+      const tokken = await FacebookApi.loginAsync();
+      console.log("tokken: ", tokken);
+    } catch (error) {
+      console.log("error: ", error);
+    }
   };
 
   onEmailPress = () => {
-    Alert.alert("Email pressed");
+    Alert.alert(
+      "Email pressed will create or open a sign up form after complitiong tutotrial"
+    );
   };
 
   opacityAnim = () => {

@@ -4,11 +4,7 @@
     "slug": "E_Store",
     "privacy": "public",
     "sdkVersion": "36.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,11 +16,18 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "facebookAppId": "218924132677704",
+    "facebookScheme": "fb218924132677704",
+    "facebookDisplayName": "E-Store",
+    "extra": {
+      "GoogleAppId": {
+        "ios": "977750568735-ja5tbmn82ogrbnuvh0if971u2tv0p7sc.apps.googleusercontent.com",
+        "android": "977750568735-plmjcem2l0n2iijfkmup8dr2nql4pshv.apps.googleusercontent.com"
+      }
     }
   }
 }
